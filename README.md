@@ -19,7 +19,7 @@ AutoRedTeam is an automated security testing tool for AI applications. It helps 
 
 ## Demo
 
-Visit the [live demo](https://YOUR_USERNAME.github.io/AutoRedTeam/)
+Visit the [live demo](https://autoredteam.netlify.app/)
 
 ## License
 
