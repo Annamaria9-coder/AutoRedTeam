@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #0f0c29;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+.shape1 {
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 0, 128, 0.3);
+    top: -250px;
+    right: -100px;
+}
+
+.shape2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 128, 255, 0.3);
+    bottom: -200px;
+    left: -100px;
+}
+
+.shape3 {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 217, 0, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px 0;
+    z-index: 1;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #ff6b6b, #6b6bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+input[type="url"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="url"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn {
+    background: linear-gradient(45deg, #6b6bff, #ff6b6b);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.test-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.test-option {
+    display: flex;
+    align-items: center;
+}
+
+.test-option input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: #6b6bff;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.number {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.passed .number {
+    color: #4caf50;
+}
+
+.failed .number {
+    color: #f44336;
+}
+
+.results-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    
+    .test-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .summary {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

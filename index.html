@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoRedTeam - AI Security Testing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+    </div>
+
+    <div class="container">
+        <header class="glass-card">
+            <h1>AutoRedTeam</h1>
+            <p>Automated security testing for your AI applications</p>
+        </header>
+
+        <main>
+            <section class="glass-card">
+                <h2>Connect Your LLM Endpoint</h2>
+                <form id="endpoint-form">
+                    <div class="form-group">
+                        <label for="api-url">API Endpoint URL</label>
+                        <input type="url" id="api-url" placeholder="https://api.example.com/v1/chat" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="api-key">API Key (if required)</label>
+                        <input type="password" id="api-key" placeholder="Your API key">
+                    </div>
+                    <button type="submit" class="btn">Connect</button>
+                </form>
+            </section>
+
+            <section class="glass-card">
+                <h2>Test Suite</h2>
+                <div class="test-options">
+                    <div class="test-option">
+                        <input type="checkbox" id="jailbreak" checked>
+                        <label for="jailbreak">Jailbreak Attempts</label>
+                    </div>
+                    <div class="test-option">
+                        <input type="checkbox" id="data-leakage" checked>
+                        <label for="data-leakage">Data Leakage</label>
+                    </div>
+                    <div class="test-option">
+                        <input type="checkbox" id="hallucination" checked>
+                        <label for="hallucination">Hallucination Detection</label>
+                    </div>
+                    <div class="test-option">
+                        <input type="checkbox" id="harmful-content" checked>
+                        <label for="harmful-content">Harmful Content</label>
+                    </div>
+                </div>
+                <button id="run-tests" class="btn">Run Security Tests</button>
+            </section>
+
+            <section class="glass-card results-card" id="results" style="display: none;">
+                <h2>Test Results</h2>
+                <div class="summary">
+                    <div class="stat">
+                        <span class="number">0</span>
+                        <span class="label">Tests Run</span>
+                    </div>
+                    <div class="stat passed">
+                        <span class="number">0</span>
+                        <span class="label">Passed</span>
+                    </div>
+                    <div class="stat failed">
+                        <span class="number">0</span>
+                        <span class="label">Failed</span>
+                    </div>
+                </div>
+                <div class="results-list">
+                    <!-- Results will be populated here -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="glass-card">
+            <p>AutoRedTeam - Securing AI, one test at a time</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
